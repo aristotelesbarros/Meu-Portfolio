@@ -1,0 +1,19 @@
+
+ header{
+    background-color: aqua;
+    border-radius: 30px;
+    text-align: center;
+   
+ }
+
+ a{
+    margin-right: 40px;
+    font-size: 23px;
+    cursor: pointer;
+    transition: 600ms;
+ }
+
+ .fundo{
+    background-image: url("fundo.png");
+    background-attachment: fixed;
+ }
