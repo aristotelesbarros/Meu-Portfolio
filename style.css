@@ -1,3 +1,86 @@
+
+/* Definição para telas menores (celulares) */
+@media (max-width: 600px) {
+   html {
+       font-size: 14px;
+   }
+
+   header {
+       flex-direction: column;
+       text-align: center;
+       padding: 1rem;
+   }
+
+   .nav {
+       flex-direction: column;
+       align-items: center;
+       gap: 0.5rem;
+   }
+
+   .home, .about {
+       flex-direction: column;
+       text-align: center;
+   }
+
+   .home-content, .about-content {
+       max-width: 90%;
+   }
+
+   .services-container, .portfolio-container {
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .services-box, .portfolio-box {
+       max-width: 100%;
+   }
+}
+
+/* Definição para tablets */
+@media (min-width: 601px) and (max-width: 992px) {
+   html {
+       font-size: 15px;
+   }
+
+   .home, .about {
+       flex-direction: column;
+       text-align: center;
+   }
+
+   .home-content, .about-content {
+       max-width: 80%;
+   }
+
+   .services-container, .portfolio-container {
+       flex-wrap: wrap;
+       justify-content: center;
+   }
+
+   .services-box, .portfolio-box {
+       max-width: 45%;
+   }
+}
+
+/* Ajuste para telas grandes */
+@media (min-width: 993px) {
+   .services-container, .portfolio-container {
+       display: flex;
+       justify-content: space-evenly;
+   }
+
+   .services-box, .portfolio-box {
+       max-width: 300px;
+   }
+
+   .home, .about {
+       flex-direction: row;
+       justify-content: space-around;
+   }
+}
+
+
+
+
 /* Reset e configurações globais */
 * {
    margin: 0;
@@ -359,3 +442,54 @@ section {
    color: aqua; 
    margin-bottom: 0.5rem; 
 }
+
+.contact {
+   text-align: center;
+   padding: 4rem 2rem;
+}
+
+.contact h2 {
+   font-size: 2.2rem;
+   margin-bottom: 1rem;
+}
+
+.contact-card {
+   width: 300px;
+   margin: 0 auto;
+   padding: 1.5rem;
+   border-radius: 1.2rem;
+   text-align: center;
+   background-color: rgb(32, 32, 29);
+   border: solid 0.15rem rgb(19, 129, 129);
+   box-shadow: 0 0 10px rgba(19, 129, 129, 0.5);
+   transition: 0.3s ease-in-out;
+   animation: borderPulse 3s infinite alternate;
+}
+
+.contact-card h3 {
+   font-size: 1.8rem;
+   margin-bottom: 1rem;
+   color: aqua;
+}
+
+.contact-card p {
+   font-size: 1rem;
+   margin: 0.5rem 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 0.5rem;
+}
+
+.contact-card p i {
+   font-size: 1.5rem;
+   color: aqua;
+}
+
+.contact-card:hover {
+   border-color: aqua;
+   transform: scale(1.05);
+}
+
+
+
