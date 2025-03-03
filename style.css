@@ -1,4 +1,3 @@
-
 /* Definição para telas menores (celulares) */
 @media (max-width: 600px) {
    html {
@@ -265,7 +264,7 @@ section {
    height: 420px;
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
+   justify-content: center; /* Centralizando o conteúdo dentro do card */
    padding: 1rem;
    border-radius: 1.2rem;
    text-align: center;
@@ -274,11 +273,39 @@ section {
    transition: 0.5s ease;
    overflow: hidden;
    animation: borderPulse 3s infinite alternate;
+   gap: 1rem; /* Ajuste o espaço entre os elementos */
+}
+
+.services-box i {
+   font-size: 3rem; 
+   color: aqua; 
+   margin-bottom: 0.5rem; 
+}
+
+.services-box h3 {
+   font-size: 1.5rem;
+   color: white;
+}
+
+.services-box p {
+   font-size: 1rem;
+   color: white;
+}
+
+@keyframes borderPulse {
+    0% {
+        box-shadow: 0 0 5px rgb(19, 129, 129);
+    }
+    100% {
+        box-shadow: 0 0 15px aqua;
+    }
 }
 
 
-
-
+.services-box:hover {
+   border-color: aqua;
+   transform: scale(1.01);
+}
 
 .portfolio-box {
    width: 300px;
@@ -359,25 +386,6 @@ section {
 }
 
 
-.btn {
-   display: inline-block;
-   padding: 0.7rem 1.8rem;
-   background-color: aqua;
-   border-radius: 2rem;
-   color: white;
-   font-weight: 600;
-   letter-spacing: 0.1rem;
-   transition: 0.3s ease;
-   margin-top: 20px;
-}
-
-.btn:hover {
-   box-shadow: 0 0 0.3rem rgb(0, 61, 77);
-   background-color: rgba(4, 65, 136, 0.753);
-   cursor: pointer;
-}
-
-
 @media (min-width: 600px) {
    .home, .about {
        flex-direction: row;
@@ -391,9 +399,6 @@ section {
     .about-img {
        max-width: 50%;
    }
-
-
-   
 .home {
    display: flex;
    align-items: center;
@@ -507,3 +512,64 @@ section {
 
 
 
+@media (max-width: 600px) {
+   header {
+       flex-direction: column; 
+       align-items: center;    
+       padding: 1.2rem 1rem;
+   }
+
+   .logo {
+       font-size: 2rem;
+       margin-bottom: 1rem; 
+   }
+
+   .nav {
+       display: flex;
+       flex-direction: row; 
+       gap: 1rem;
+       align-items: center;
+   }
+
+   .nav a {
+       font-size: 1.2rem;
+       padding: 0.5rem 1rem;
+       text-align: center;
+   }
+
+   .home{
+      margin-top: 121px;
+   }
+}
+
+/* Estilização para o botão "Baixar Currículo" */
+.btn2 {
+   display: inline-block;
+   padding: 10px 20px;
+   font-size: 1.1rem;
+   font-weight: bold;
+   color: #fff;
+   background-color: rgb(19, 129, 129);
+   border-radius: 5px;
+   text-align: center;
+   text-decoration: none;
+   transition: background-color 0.3s, transform 0.2s ease-in-out;
+   border: solid 2px transparent;
+   box-shadow: 0 0 10px rgba(19, 129, 129, 0.5);
+   margin-top: 1rem;
+}
+
+.btn2:hover {
+   background-color: aqua;
+   transform: scale(1.05);
+   border-color: rgb(19, 129, 129);
+}
+
+.btn2:active {
+   transform: scale(0.98);
+}
+
+.btn2:focus {
+   outline: none;
+   box-shadow: 0 0 10px rgba(19, 129, 129, 0.7);
+}
