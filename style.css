@@ -6,20 +6,26 @@
    }
 
    header {
-       flex-direction: column;
-       text-align: center;
-       padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      position: relative;
+      z-index: 10;
+     
    }
 
    .nav {
-       flex-direction: column;
-       align-items: center;
-       gap: 0.5rem;
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: center;
+      gap: 1rem; 
    }
 
    .home, .about {
        flex-direction: column;
        text-align: center;
+       margin-top: 80px;
    }
 
    .home-content, .about-content {
@@ -36,7 +42,7 @@
    }
 }
 
-/* Definição para tablets */
+
 @media (min-width: 601px) and (max-width: 992px) {
    html {
        font-size: 15px;
@@ -61,7 +67,7 @@
    }
 }
 
-/* Ajuste para telas grandes */
+
 @media (min-width: 993px) {
    .services-container, .portfolio-container {
        display: flex;
@@ -78,10 +84,6 @@
    }
 }
 
-
-
-
-/* Reset e configurações globais */
 * {
    margin: 0;
    padding: 0;
@@ -102,7 +104,7 @@ body {
    color: white;
 }
 
-/* Estilização do cabeçalho */
+
 header {
    position: fixed;
    top: 0;
@@ -212,6 +214,25 @@ section {
 .home-img, .about-img {
    width: 100%;
    max-width: 300px;
+}
+
+.home-img img {
+   width: 100%; 
+   max-width: 250px;
+   height: auto; 
+   display: block; 
+   margin: 0 auto; 
+   max-width: 180px; /* Ajuste de tamanho para mobile */
+       border-radius: 1.2rem; /* As bordas arredondadas continuam */
+       box-shadow: 0 0 20px rgba(255, 255, 255, 1); /* Garantir o efeito de sombra */
+    
+}
+
+
+@media (max-width: 600px) {
+   .home-img img {
+       max-width: 180px; 
+   }
 }
 
 
@@ -337,7 +358,7 @@ section {
    transform: scale(1.05);
 }
 
-/* Botão padrão */
+
 .btn {
    display: inline-block;
    padding: 0.7rem 1.8rem;
@@ -402,14 +423,7 @@ section {
 }
 
 
-@keyframes whitePulse {
-   0% {
-       box-shadow: 0 0 10px rgba(252, 252, 252, 0.4);
-   }
-   100% {
-       box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
-   }
-}
+
 
 
    .services-container, .portfolio-container {
