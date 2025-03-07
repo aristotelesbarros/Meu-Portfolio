@@ -1,4 +1,4 @@
-/* Definição para telas menores (celulares) */
+
 @media (max-width: 600px) {
    html {
        font-size: 14px;
@@ -40,6 +40,7 @@
        max-width: 100%;
    }
 }
+
 
 
 @media (min-width: 601px) and (max-width: 992px) {
@@ -221,9 +222,9 @@ section {
    height: auto; 
    display: block; 
    margin: 0 auto; 
-   max-width: 180px; /* Ajuste de tamanho para mobile */
-       border-radius: 1.2rem; /* As bordas arredondadas continuam */
-       box-shadow: 0 0 20px rgba(255, 255, 255, 1); /* Garantir o efeito de sombra */
+   max-width: 180px;
+       border-radius: 1.2rem; 
+       box-shadow: 0 0 20px rgba(255, 255, 255, 1); 
     
 }
 
@@ -542,7 +543,7 @@ section {
    }
 }
 
-/* Estilização para o botão "Baixar Currículo" */
+
 .btn2 {
    display: inline-block;
    padding: 10px 20px;
@@ -558,6 +559,20 @@ section {
    box-shadow: 0 0 10px rgba(19, 129, 129, 0.5);
    margin-top: 1rem;
 }
+
+span{
+   color: rgb(88, 196, 160);
+}
+
+
+
+
+
+
+
+
+
+
 
 .btn2:hover {
    background-color: aqua;
